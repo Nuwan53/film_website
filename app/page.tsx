@@ -1,21 +1,104 @@
+"use client"
+import React from "react"
+
+
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 import { Search, Play, Star, Calendar, Clock } from "lucide-react"
 import Image from "next/image"
+import { useState } from "react"
 
 export default function FilmWebsite() {
-  const featuredMovie = {
-    title: "Dune: Part Two",
-    description:
-      "Paul Atreides unites with Chani and the Fremen while seeking revenge against the conspirators who destroyed his family.",
-    rating: 8.5,
-    year: 2024,
-    duration: "166 min",
-    genre: ["Sci-Fi", "Adventure", "Drama"],
-    poster: "/placeholder.svg?height=600&width=400",
-  }
+
+  const featuredMovies = [
+    {
+      title: "Dune: Part Two",
+      description:
+        "Paul Atreides unites with Chani and the Fremen while seeking revenge against the conspirators who destroyed his family.",
+      rating: 8.5,
+      year: 2024,
+      duration: "166 min",
+      genre: ["Sci-Fi", "Adventure", "Drama"],
+      poster: "/placeholder.svg?height=600&width=400",
+    },
+    {
+      title: "Oppenheimer",
+      description:
+        "The story of J. Robert Oppenheimer and the creation of the atomic bomb during World War II.",
+      rating: 8.3,
+      year: 2023,
+      duration: "180 min",
+      genre: ["Biography", "Drama", "History"],
+      poster: "/placeholder.svg?height=600&width=400",
+    },
+    {
+      title: "Spider-Man: Across the Spider-Verse",
+      description:
+        "Miles Morales catapults across the Multiverse, encountering a team of Spider-People charged with protecting its very existence.",
+      rating: 8.7,
+      year: 2023,
+      duration: "140 min",
+      genre: ["Animation", "Action", "Adventure"],
+      poster: "/placeholder.svg?height=600&width=400",
+    },
+  ]
+
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      setFeaturedIndex((prev) =>
+        prev === featuredMovies.length - 1 ? 0 : prev + 1
+      )
+    }, 5000) // Change banner every 5 seconds
+    return () => clearInterval(interval)
+  }, [featuredMovies.length])
+
+  // Add this state to track the featured movie for the hero section
+  const [featuredIndex, setFeaturedIndex] = useState(0)
+  const featuredMovie = featuredMovies[featuredIndex]
+  
+   function FeaturedSlider() {
+  const [sliderIndex, setSliderIndex] = useState(0)
+  const sliderMovie = featuredMovies[sliderIndex]
+
+  return (
+    <div>
+      <h2>{sliderMovie.title}</h2>
+      <p>{sliderMovie.description}</p>
+      <p>Rating: {sliderMovie.rating}</p>
+      <p>Year: {sliderMovie.year}</p>
+      <p>Duration: {sliderMovie.duration}</p>
+      <p>Genres: {sliderMovie.genre.join(", ")}</p>
+      <img src={sliderMovie.poster} alt={sliderMovie.title} />
+
+      <div>
+        <button
+          onClick={() =>
+            setSliderIndex((prev) =>
+              prev === 0 ? featuredMovies.length - 1 : prev - 1
+            )
+          }
+        >
+          Prev
+        </button>
+        <button
+          onClick={() =>
+            setSliderIndex((prev) =>
+              prev === featuredMovies.length - 1 ? 0 : prev + 1
+            )
+          }
+        >
+          Next
+        </button>
+      </div>
+    </div>
+  )
+}
+
+
+  
+  
 
   const trendingMovies = [
     {
