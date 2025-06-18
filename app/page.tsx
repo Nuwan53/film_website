@@ -157,31 +157,31 @@ export default function FilmWebsite() {
   const upcomingMovies = [
     {
       id: 1,
-      title: "Deadpool 3",
-      releaseDate: "July 26, 2024",
+      title: "Narivetta",
+      //releaseDate: "July 26, 2024",
       genre: "Action",
-      poster: "/placeholder.svg?height=450&width=300",
+      poster: "/MV5BN2QwMGM0MGMtYTQ1MS00M2UzLTg1NWYtMjk2MmQ2OTIyOTU4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg?height=450&width=300",
     },
     {
       id: 2,
-      title: "Inside Out 2",
-      releaseDate: "June 14, 2024",
-      genre: "Animation",
-      poster: "/placeholder.svg?height=450&width=300",
+      title: "Kannappa",
+      //releaseDate: "June 14, 2024",
+      genre: "Fantasy/Drama",
+      poster: "/Kannappa_(film).jpg?height=450&width=300",
     },
     {
       id: 3,
-      title: "A Quiet Place: Day One",
-      releaseDate: "June 28, 2024",
-      genre: "Horror",
-      poster: "/placeholder.svg?height=450&width=300",
+      title: "Bazooka",
+      //releaseDate: "June 28, 2024",
+      genre: "Thriller/Action",
+      poster: "/Bazooka_poster.jpeg?height=450&width=300",
     },
     {
       id: 4,
-      title: "Bad Boys: Ride or Die",
-      releaseDate: "June 7, 2024",
+      title: "Dominic and the Ladies' Purse",
+      //releaseDate: "June 7, 2024",
       genre: "Action",
-      poster: "/placeholder.svg?height=450&width=300",
+      poster: "/Dominic_and_the_Ladies'_Purse_poster.jpg?height=450&width=300",
     },
   ]
 
@@ -192,9 +192,17 @@ export default function FilmWebsite() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-8">
-              <h1 className="text-2xl font-bold bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent">
+              {/* <h1 className="text-2xl font-bold bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent">
                 CinemaHub
-              </h1>
+              </h1> */}
+              <Image
+                src="/logo.png"
+                alt="CinemaHub Logo"
+                height={100}
+                width={150}
+                className="h-10"
+              />
+
               <nav className="hidden md:flex space-x-6">
                 <a href="#" className="hover:text-red-400 transition-colors">
                   Home
