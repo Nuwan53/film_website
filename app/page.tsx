@@ -111,7 +111,12 @@ export default function FilmWebsite() {
       year: 2025,
       genre: "Thriller/Drama",
       poster: "/Thudarum_film.jpg?height=450&width=300",
+      onClick: () => {
+        window.location.href = "/movies/thudarum";
+      },
     },
+    
+
     {
       id: 2,
       title: "Allapaula Gymkhana",
@@ -199,7 +204,7 @@ export default function FilmWebsite() {
                 src="/logo.png"
                 alt="CinemaHub Logo"
                 height={100}
-                width={150}
+                width={120}
                 className="h-10"
               />
 
@@ -207,11 +212,15 @@ export default function FilmWebsite() {
                 <a href="#" className="hover:text-red-400 transition-colors">
                   Home
                 </a>
-                <a href="#" className="hover:text-red-400 transition-colors">
-                  Movies
+                <a href="#Trending Now" className="hover:text-red-400 transition-colors">
+                  Trending
                 </a>
-                <a href="#" className="hover:text-red-400 transition-colors">
-                  TV Shows
+                
+               
+
+
+                <a href="#Coming soon" className="hover:text-red-400 transition-colors">
+                  Comming Soon
                 </a>
                 <a href="#" className="hover:text-red-400 transition-colors">
                   Genres
@@ -229,6 +238,7 @@ export default function FilmWebsite() {
               <Button variant="outline" className="border-red-500 text-red-500 hover:bg-red-500 hover:text-white">
                 Sign In
               </Button>
+              
             </div>
           </div>
         </div>
@@ -287,7 +297,7 @@ export default function FilmWebsite() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between mb-8">
-            <h3 className="text-3xl font-bold">Trending Now</h3>
+            <h3 className="text-3xl font-bold" id="Trending Now" >Trending Now</h3>
             <Button variant="ghost" className="text-red-400 hover:text-red-300">
               View All
             </Button>
@@ -336,7 +346,7 @@ export default function FilmWebsite() {
       <section className="py-16 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between mb-8">
-            <h3 className="text-3xl font-bold">Coming Soon</h3>
+            <h3 className="text-3xl font-bold" id="Coming soon">Coming Soon</h3>
             <Button variant="ghost" className="text-red-400 hover:text-red-300">
               View All
             </Button>
@@ -410,7 +420,7 @@ export default function FilmWebsite() {
                 CinemaHub
               </h4>
               <p className="text-slate-400 mb-4">
-                Your ultimate destination for movies and TV shows. Discover, watch, and enjoy the best entertainment.
+                Your ultimate destination for Malayalam movies. Discover, watch, and enjoy the best entertainment.
               </p>
             </div>
             <div>
@@ -490,7 +500,7 @@ export default function FilmWebsite() {
             </div>
           </div>
           <div className="border-t border-slate-700 mt-8 pt-8 text-center text-slate-400">
-            <p>&copy; 2024 CinemaHub. All rights reserved.</p>
+            <p>&copy; 2025 Malayalam Fans Only. All rights reserved.</p>
           </div>
         </div>
       </footer>
