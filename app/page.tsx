@@ -416,9 +416,17 @@ export default function FilmWebsite() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
-              <h4 className="text-xl font-bold bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent mb-4">
+              {/* <h4 className="text-xl font-bold bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent mb-4">
                 CinemaHub
-              </h4>
+              </h4> */}
+              <Image
+                src="/logo.png"
+                alt="CinemaHub Logo"
+                height={100}
+                width={120}
+                
+                className="h-10"
+              />
               <p className="text-slate-400 mb-4">
                 Your ultimate destination for Malayalam movies. Discover, watch, and enjoy the best entertainment.
               </p>
