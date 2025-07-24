@@ -1,14 +1,20 @@
 "use client"
 import React from "react"
 
-
+import { Link } from "react-router-dom";
+import { useRouter } from "next/navigation"
+import { useAuth } from "@/hooks/useAuth"
+import { SignInForm } from "@/components/SignInForm"
+import { useToast } from "@/hooks/use-toast"
+import { useTranslation } from "react-i18next"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
-import { Search, Play, Star, Calendar, Clock } from "lucide-react"
+import { Search, Play, Star, Calendar, Clock, Link } from "lucide-react"
 import Image from "next/image"
 import { useState } from "react"
+import { Link } from "react-router-dom";
 
 export default function FilmWebsite() {
 
@@ -235,9 +241,13 @@ export default function FilmWebsite() {
                   className="pl-10 bg-slate-800 border-slate-600 text-white placeholder-slate-400 w-64"
                 />
               </div>
+
+              <Link to="/signin"></Link>
               <Button variant="outline" className="border-red-500 text-red-500 hover:bg-red-500 hover:text-white">
                 Sign In
               </Button>
+
+              
               
             </div>
           </div>
