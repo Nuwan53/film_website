@@ -160,6 +160,7 @@ export default function FilmWebsite() {
               <a href="#Trending Now" className="hover:text-red-400">Trending</a>
               <a href="#Coming soon" className="hover:text-red-400">Coming Soon</a>
               <a href="#" className="hover:text-red-400">Genres</a>
+              <a href="#" className="hover:text-red-400">Genres</a>
             </nav>
           </div>
 
