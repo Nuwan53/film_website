@@ -32,6 +32,7 @@ export default function SignIn() {
 
 interface SignInFormProps {
   onSubmit: (email: string, password: string) => Promise<void>;
+  
 }
 
 
@@ -41,5 +42,7 @@ interface SignInFormProps {
     //       <h1 className="mb-6 text-2xl font-bold text-center">{t("signIn.title")}</h1>
     //       <SignInForm onSubmit={handleSignIn} />
     //     </div>)
+
+
 
 }
